@@ -1,0 +1,25 @@
+CREATE TABLE IF NOT EXISTS albums (
+id SERIAL PRIMARY KEY,
+title VARCHAR(100) NOT NULL,
+year INTEGER NOT NULL,
+artist_id INTEGER REFERENCES artists(id)
+);
+
+CREATE TABLE IF NOT EXISTS tracks (
+id SERIAL PRIMARY KEY,
+title VARCHAR(100) NOT NULL,
+duration INTEGER NOT NULL,
+album_id INTEGER REFERENCES albums(id)
+);
+
+CREATE TABLE IF NOT EXISTS collections (
+id SERIAL PRIMARY KEY,
+title VARCHAR(100) NOT NULL,
+year INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS collection_tracks (
+collection_id INTEGER REFERENCES collections(id),
+track_id INTEGER REFERENCES tracks(id),
+PRIMARY KEY (collection_id, track_id)
+);
