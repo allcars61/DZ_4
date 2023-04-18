@@ -1,136 +1,158 @@
+
 INSERT INTO genres (name) VALUES
-('rock'),
-('pop'),
-('hip-hop'),
-('electronic'),
-('jazz');
+('Rock'),
+('Pop'),
+('Hip-hop'),
+('Electronic'),
+('Jazz');
 
-INSERT INTO artists (name, genre_id) VALUES
-('Queen', 1),
-('The Beatles', 1),
-('Michael Jackson', 2),
-('Eminem', 3),
-('Daft Punk', 4),
-('Chet Baker', 5),
-('Radiohead', 1),
-('Beyonce', 2);
+INSERT INTO artists (name) VALUES
+('Queen'),
+('Michael Jackson'),
+('Kanye West'),
+('Daft Punk'),
+('Miles Davis'),
+('Led Zeppelin'),
+('Beyonce'),
+('Jay-Z'),
+('The Beatles'),
+('David Bowie'),
+('Prince'),
+('Radiohead'),
+('Coldplay'),
+('Ariana Grande'),
+('Drake');
 
-INSERT INTO albums (title, year, artist_id) VALUES
-('A Night at the Opera', 1975, 1),
-('Abbey Road', 1969, 2),
-('Thriller', 1982, 3),
-('The Slim Shady LP', 1999, 4),
-('Discovery', 2001, 5),
-('Chet Baker Sings', 1954, 6),
-('OK Computer', 1997, 7),
-('Lemonade', 2016, 8);
+INSERT INTO artist_genres (artist_id, genre_id) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 1),
+(7, 2),
+(8, 3),
+(9, 1),
+(10, 4),
+(11, 2),
+(12, 1),
+(13, 1),
+(14, 5);
+
+INSERT INTO albums (title, year) VALUES
+('A Night at the Opera', 1975),
+('Thriller', 1982),
+('My Beautiful Dark Twisted Fantasy', 2010),
+('Random Access Memories', 2020),
+('Kind of Blue', 1959),
+('Led Zeppelin IV', 1971),
+('Lemonade', 2018),
+('The Blueprint', 2019),
+('Sgt. Pepper''s Lonely Hearts Club Band', 1967),
+('The Rise and Fall of Ziggy Stardust and the Spiders from Mars', 1918),
+('Purple Rain', 1984),
+('OK Computer', 1997);
+
+INSERT INTO album_artists (album_id, artist_id) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(11, 11),
+(12, 12);
+
 
 INSERT INTO tracks (title, duration, album_id) VALUES
 ('Bohemian Rhapsody', 354, 1),
-('Come Together', 259, 2),
-('Thriller', 358, 3),
-('My Name Is', 276, 4),
-('One More Time', 320, 5),
-('My Funny Valentine', 283, 6),
-('Paranoid Android', 386, 7),
-('Sorry', 273, 8),
-('Get Lucky', 368, 5),
-('Space Oddity', 315, 2),
-('Don''t Stop ''Til You Get Enough', 354, 3),
-('Lose Yourself', 326, 4),
-('Digital Love', 292, 5),
-('Blackbird', 177, 2),
-('Karma Police', 265, 7);
+('Beat It', 258, 2),
+('Runaway', 346, 3),
+('Get Lucky', 369, 4),
+('So What', 569, 5),
+('Stairway to Heaven', 482, 6),
+('Formation', 239, 7),
+('Takeover', 324, 8),
+('Lucy in the Sky with Diamonds', 209, 9),
+('Starman', 258, 10),
+('When Doves Cry', 333, 11),
+('Paranoid Android', 386, 12),
+('Viva La Vida', 242, 12),
+('God is a Woman', 197, 13),
+('In My Feelings', 217, 14),
+('Radio Ga Ga', 348, 1),
+('Billie Jean', 293, 2),
+('All of the Lights', 300, 3),
+('Instant Crush', 339, 4),
+('Blue in Green', 360, 5),
+('Black Dog', 295, 6),
+('Sorry', 203, 7),
+('99 Problems', 235, 8),
+('With a Little Help from My Friends', 161, 9),
+('Life on Mars?', 236, 10),
+('Let''s Go Crazy', 292, 11);
 
 INSERT INTO collections (title, year) VALUES
-('Best of Queen', 2020),
-('The Beatles Anthology', 1995),
-('King of Pop', 2008),
-('6 Feet Underground', 2019),
-('Daft Club', 2003),
-('Chet Baker''s Best', 2010),
-('Radiohead: The Best Of', 2008),
-('Homecoming: The Live Album', 2019);
+('The Essential Queen', 2011),
+('The Essential Michael Jackson', 2005),
+('The Essential Kanye West', 2010),
+('The Essential Daft Punk', 2018),
+('The Essential Miles Davis', 2019),
+('The Essential Led Zeppelin', 2021),
+('The Essential Beyonce', 2019),
+('The Essential Jay-Z', 2010),
+('The Essential Beatles', 2000),
+('The Essential David Bowie', 2014),
+('The Essential Prince', 2020),
+('The Essential Radiohead', 2016);
 
 INSERT INTO collection_tracks (collection_id, track_id) VALUES
-(1, 1),
-(1, 7),
-(1, 14),
-(2, 2),
-(2, 5),
-(2, 15),
-(3, 3),
-(3, 11),
-(3, 13),
-(4, 4),
-(4, 8),
-(4, 12),
-(5, 5),
-(5, 9),
-(6, 6),
-(6, 14),
-(6, 15),
-(7, 7),
-(7, 14),
-(7, 15),
-(8, 8),
-(8, 15);
+(1, 27),
+(1, 28),
+(2, 35),
+(2, 32),
+(3, 45),
+(3, 28),
+(4, 27),
+(4, 36),
+(5, 29),
+(5, 32),
+(6, 34),
+(6, 50),
+(7, 45),
+(7, 27),
+(8, 31),
+(8, 33),
+(9, 39),
+(9, 42),
+(10, 27),
+(10, 44),
+(11, 42),
+(11, 40),
+(12, 47),
+(12, 35);
 
+-- Добавление
+INSERT INTO albums (title, year) VALUES ('Multi-Genre Album', 2021);
 
+INSERT INTO artists (name) VALUES ('Artist 1'), ('Artist 2'), ('Artist 3');
 
-INSERT INTO tracks (title, duration, album_id) VALUES
-('New Track', 240, (SELECT id FROM albums WHERE year BETWEEN 2019 AND 2020 LIMIT 1));
+INSERT INTO genres (name) VALUES ('Rock'), ('Pop'), ('Hip-Hop');
 
-ALTER TABLE albums ADD COLUMN multi_genre BOOLEAN;
+INSERT INTO artist_genres (artist_id, genre_id) VALUES
+(16, 1), (16, 2), (17, 2), (17, 3), (18, 1), (18, 3);
 
-UPDATE albums SET multi_genre = TRUE WHERE artist_id IN (
-  SELECT artist_id FROM artists
-  GROUP BY artist_id
-  HAVING COUNT(DISTINCT genre_id) > 1
-);
-
-INSERT INTO genres (name) VALUES
-('funk'),
-('soul'),
-('blues');
-
-UPDATE artists SET genre_id = 1 WHERE name = 'Daft Punk'; -- изменяем жанр для исполнителя
-INSERT INTO artists (name, genre_id) VALUES
-('James Brown', 2),
-('Prince', 1),
-('Nina Simone', 3);
-
-INSERT INTO albums (title, year, artist_id) VALUES
-('Homework', 2018, 5),
-('Discovery', 2019, 5),
-('Human After All', 2020, 5),
-('Purple Rain', 1984, 8),
-('Sign "☮" the Times', 1987, 8),
-('Nina Simone Sings the Blues', 1967, 9),
-('I Put a Spell on You', 1965, 9);
+INSERT INTO album_artists (album_id, artist_id) VALUES
+(1, 16), (1, 17), (1, 18);
 
 INSERT INTO tracks (title, duration, album_id) VALUES
-('Da Funk', 331, 9),
-('One More Time', 320, 10),
-('Technologic', 180, 11),
-('When Doves Cry', 313, 12),
-('U Got the Look', 337, 13),
-('I Put a Spell on You', 139, 14),
-('Feeling Good', 147, 15);
+('Song 1', 240, 1), ('Song 2', 300, 1), ('Song 3', 180, 1);
 
-INSERT INTO collections (title, year) VALUES
-('Daft Punk: Best Of', 2021),
-('Prince: Greatest Hits', 1993),
-('Nina Simone Collection', 2005);
+INSERT INTO collections (title, year) VALUES ('Best of 2021', 2021);
 
 INSERT INTO collection_tracks (collection_id, track_id) VALUES
-(5, 12),
-(5, 10),
-(5, 11),
-(6, 7),
-(6, 8),
-(6, 9),
-(7, 16),
-(7, 17),
-(8, 9),
-(8, 10);
+(1, 53), (1, 54), (1, 55);
